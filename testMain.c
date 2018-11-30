@@ -1,7 +1,7 @@
 #include "testMain.h"
 
 int equal(double a, double b, double threshhold);
-
+/*The following code tests the functions of  */ 
 int main(int argc, char** argv)
 {
     if(testCreation() == 1)
@@ -48,7 +48,10 @@ int equal(double a, double b, double threshhold)
     else 
         return 0;
 }
-
+/* The testCreation function inserts values for the coefficients and calls createPolynomial funtion to create a polynomial. It then checks if the coefficients of the created polynomial match the expected coefficint
+(there is a threshold of 0.001 for the difference between the coefficient and the expected coefficient) if the coefficients match 
+a value of 1 is returned to the ret value and the polynomials is deleted and the coeeficient values are freed. This test is then 
+run a second time with new coefficents to ensure the code works (returning a value of 0 to ret if test fails)*/
 int testCreation()
 {
     double threshhold = 0.001;
@@ -117,7 +120,7 @@ int testCreation()
     
     return ret;
 }
-
+/* */
 int testAddition()
 {
     double threshhold = 0.001;
